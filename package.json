@@ -1,0 +1,32 @@
+{
+    "name": "eth-data-decoder",
+    "version": "0.0.1",
+    "description": "Ethereum transaction contract data decoding library",
+    "main": "index.js",
+    "repository": "https://github.com/zabirauf/eth-data-decoder",
+    "author": "Zohaib Rauf",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "./node_modules/typescript/bin/tsc",
+        "test": "jest"
+    },
+    "jest": {
+        "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(js|ts)$",
+        "moduleFileExtensions": [
+            "ts",
+            "js",
+            "json",
+            "node"
+        ],
+        "roots": [
+            "<rootDir>/src"
+        ]
+    },
+    "devDependencies": {
+        "@types/bignumber.js": "^5.0.0",
+        "typescript": "^3.4.5",
+        "jasmine": "^3.1.0",
+        "jest": "^23.3.0"
+    }
+}
