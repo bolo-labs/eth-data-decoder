@@ -8,25 +8,19 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "build": "./node_modules/typescript/bin/tsc",
+        "build": "tsc",
         "test": "jest"
-    },
-    "jest": {
-        "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(js|ts)$",
-        "moduleFileExtensions": [
-            "ts",
-            "js",
-            "json",
-            "node"
-        ],
-        "roots": [
-            "<rootDir>/src"
-        ]
     },
     "devDependencies": {
         "@types/bignumber.js": "^5.0.0",
+        "@types/jasmine": "^2.8.7",
+        "@types/node": "^12.0.2",
         "typescript": "^3.4.5",
         "jasmine": "^3.1.0",
-        "jest": "^23.3.0"
+        "jest": "^23.3.0",
+        "ts-jest": "^24.0.2"
+    },
+    "dependencies": {
+        "crypto-js": "^3.1.9-1"
     }
 }

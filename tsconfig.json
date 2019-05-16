@@ -3,14 +3,18 @@
         "module": "commonjs",
         "target": "es5",
         "lib": ["es2017"],
-        "outDir": "dist",
+        "outDir": "build",
         "sourceMap": true,
         "declaration": true,
         "experimentalDecorators": true,
         "strictNullChecks": true,
         "noImplicitThis": true,
         "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "pretty": true,
         "strict": true
-    }
+    },
+    "include": ["lib"],
+    "exclude": ["node_modules", "build", "dist"]
 }

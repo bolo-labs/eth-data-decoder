@@ -103,8 +103,6 @@ function matchDataParamsWithABIParams(
     params: string[],
     inputABI: ABIDescriptionInput[]
 ): ParamInfo[] {
-    const paramInfo: ParamInfo[] = [];
-
     let paramIndex = 0;
     return inputABI.map(input => {
         const { info, nextParamIndex } = decodeParam(paramIndex, params, input);
@@ -148,13 +146,10 @@ function decodeDynamicParam(
     const typeMatch = TYPE_MATCHER.exec(inputABI.type);
 
     if (typeMatch) {
-        const [_, type] = typeMatch;
+        const [, type] = typeMatch;
 
         if (type === 'bytes') {
-            const { value, rawValue, nextParamIndex } = decodeDynamicBytes(
-                paramIndex,
-                params
-            );
+            const { value, rawValue } = decodeDynamicBytes(paramIndex, params);
 
             return {
                 info: {
@@ -168,7 +163,7 @@ function decodeDynamicParam(
                 nextParamIndex: paramIndex + 1,
             };
         } else {
-            const { value, rawValue, nextParamIndex } = decodeDynamicArray(
+            const { value, rawValue } = decodeDynamicArray(
                 paramIndex,
                 params,
                 (paramIndex, params) =>
@@ -202,7 +197,7 @@ function decodeStaticParam(
 ): { info: ParamInfo; nextParamIndex: number } {
     const arrayMatch = STATIC_TYPED_ARRAY_MATCHER.exec(inputABI.type);
     if (arrayMatch) {
-        const [_wholeString, type, _typeSize, arraySize] = arrayMatch;
+        const [, type, , arraySize] = arrayMatch;
         const arraySizeNum = parseInt(arraySize);
 
         const values: NonArrayParamInfo[] = [];

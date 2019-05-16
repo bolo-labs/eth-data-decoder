@@ -1,9 +1,9 @@
-import { findFunctionABI } from '../../utils/findFunctionABI';
+import { findFunctionABI } from '../../lib/utils/findFunctionABI';
 import {
     ContractABI,
     ABIFunctionDescription,
     ABIConstructorDescription,
-} from '../../types/ABI';
+} from '../../lib/types/ABI';
 
 const TRANSFORM_FUNCTION_SELECTOR = 'a9059cbb';
 const TRANSFORM_FUNCTION_ABI = Object.freeze<ABIFunctionDescription>({

@@ -1,4 +1,4 @@
-export * from './types/ABI';
+export * from './lib/types/ABI';
 export {
     AddressParamInfo,
     BaseParamInfo,
@@ -14,4 +14,4 @@ export {
     ValueType,
     decodeTransactionDataProcessor,
     decodeTransactionFunctionProcessor,
-} from './decoder/decodeTransactionData';
+} from './lib/decoder/decodeTransactionData';

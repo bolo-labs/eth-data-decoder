@@ -5,12 +5,12 @@ import {
     NumberParamInfo,
     ArrayParamInfo,
     BytesParamInfo,
-} from '../../decoder/decodeTransactionData';
+} from '../../lib/decoder/decodeTransactionData';
 import {
     ContractABI,
     ABIFunctionDescription,
     ABIConstructorDescription,
-} from '../../types/ABI';
+} from '../../lib/types/ABI';
 
 const TRANSFORM_FUNCTION_ABI = Object.freeze<ABIFunctionDescription>({
     constant: false,

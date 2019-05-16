@@ -1,4 +1,4 @@
-import { splitData } from '../../utils/splitData';
+import { splitData } from '../../lib/utils/splitData';
 import 'jasmine';
 
 describe('splitData', () => {
