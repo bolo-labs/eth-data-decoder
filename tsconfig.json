@@ -3,7 +3,7 @@
         "module": "commonjs",
         "target": "es5",
         "lib": ["es2017"],
-        "outDir": "build",
+        "outDir": "dist",
         "sourceMap": true,
         "declaration": true,
         "experimentalDecorators": true,

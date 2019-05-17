@@ -91,7 +91,9 @@ export function decodeTransactionDataProcessor(
     };
 }
 
-export function decodeTransactionFunctionProcessor(contractABI: ContractABI) {
+export function decodeTransactionFunctionProcessor(
+    contractABI: ContractABI
+): (data: string) => ABIFunctionDescription | null {
     const functionFinder = findFunctionABIProcessor(contractABI);
     return (data: string) => {
         const functionSelector = splitFunctionSelector(data);
