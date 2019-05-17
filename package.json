@@ -1,6 +1,6 @@
 {
     "name": "eth-data-decoder",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Ethereum transaction contract data decoding library",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
